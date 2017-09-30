@@ -1,0 +1,197 @@
+body, html { width: 100%; height: 100%; }
+body {
+    margin: 0 auto; color: #222;
+}
+
+.container {
+    padding: 10px 15px; margin: 10px 15px;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex; flex-direction: row;
+    justify-content: space-between;
+
+    padding: 15px; box-sizing: border-box;
+    border-bottom: 2px solid #ececec;
+}
+
+.logo {
+    width: 100px; height: 100px;
+    background-image: url('/assets/images/dp-bw.jpg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+}
+
+.header-title-section {
+    display: flex; flex-direction: column;
+    justify-content: center; margin-right: 5%;
+}
+
+.header-title {
+    font-family: "Source Sans Pro";
+    text-transform: uppercase; font-weight: 100;
+    font-size: 2.5em; letter-spacing: 0.2em;
+}
+.header-subtitle {
+    font-family: "Source Sans Pro";
+    font-size: 70%; color: #999;
+    padding-left: 3px; padding-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-section {
+    display: flex; flex-direction: row;
+    margin-top: 30px; margin-bottom: 20px;
+}
+.info-row {
+    display: flex; flex-direction: column;
+}
+
+.info-left {
+    flex: 4; padding-right: 20px;
+    border-right: 2px solid #ececec;
+}
+.info-right {
+    flex: 8; margin-left: 20px;
+}
+
+.cat-header {
+    padding: 6px 0; box-sizing: border-box;
+    font-size: 1.2em;
+    border-bottom: 1px solid #f0f0f0;
+}
+.cat-indicator {
+    color: #f4645f;
+}
+.cat-title {
+    font-family: "Source Sans Pro";
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    vertical-align: text-bottom;
+    padding-left: 10px;
+}
+.cat-def-body, .cat-skill-body {
+    padding: 10px 5px 10px 30px;
+}
+
+/* Contact style */
+.cat-contact-body {}
+.contact-item {
+    display: flex; padding: 10px 0;
+}
+.contact-logo {
+    color: #f4645f;
+}
+.contact-info {
+    padding-left: 18px;
+}
+
+/* Lists */
+.cat-list-body {
+    padding: 10px 0;
+}
+.cat-list-body ul {
+    padding-left: 18px; margin: 0;
+    list-style-type: circle;
+}
+.cat-list-body li {
+    padding: 10px 0; padding-left: 0.9em;
+}
+
+/* Links */
+a { text-decoration: none; color: #f4645f; }
+.link-title {
+    font-size: 1.1em; font-weight: 600;
+    color: #222;
+}
+.link-src {}
+
+/* Education */
+.edu-header {}
+.edu-alma, .project-title, .skill-title {
+    text-transform: uppercase;
+    font-weight: 600; letter-spacing: 0.15em;
+    padding-right: 60px;
+}
+.edu-duration, .project-duration, .ach-duration {
+    float: right; color: #bbb;
+    font-style: italic;
+}
+.edu-class-data {
+    clear: right; margin-top: 5px;
+}
+.edu-std {
+    letter-spacing: 0.1em; color: #666;
+}
+.edu-score {
+    margin-left: 20px; padding: 2px 8px;
+    background-color: #f4645f; color: #fff;
+    border-radius: 20px;
+}
+
+.cat-def-body, .cat-list-body,
+.cat-contact-body, .cat-skill-body {
+    font-family: "Source Sans Pro";
+    font-size: 0.9em;
+}
+
+/* Project */
+.project-header {}
+.project-title {}
+.project-duration {}
+.project-link {}
+.project-desc {
+    margin-top: 8px; color: #444;
+    padding: 4px 0 4px 16px;
+    border-left: 2px solid beige;
+    font-style: italic;
+}
+
+/* Skills */
+.force-inline { display: inline-block !important; }
+.cat-skill-type {
+    font-family: 'Roboto Condensed';
+    padding: 10px 10px 5px 50px; color: #888;
+    font-size: 0.8em; letter-spacing: 0.1em;
+    text-transform: uppercase; position: relative;
+}
+.cat-skill-type:before {
+    content: '\25c6';
+    margin-top: -0.10em; position: absolute;
+    margin-left: -1.5em; color: #f4645f;
+}
+.cat-skill-body {
+    display: flex; flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 0 5px 40px;
+}
+.cat-skill-body-gen {
+    display: inline-block;
+}
+.skill {
+    margin: 10px 0; padding: 0 10px;
+    box-sizing: border-box;
+}
+.skill-gen {
+    display: inline; padding: 3px 10px;
+    margin: 0 5px; background-color: #222;
+    border-radius: 3px; color: #fff;
+    font-family: "Source Sans Pro";
+}
+.skill-gen:first-child { margin-left: 30px; }
+.skill-title, .skill-gen { font-size: 0.8em; }
+.skill-progress-track {
+    height: 10px; min-width: 150px;
+    background-color: #eee; margin-top: 6px;
+}
+.skill-progress {
+    height: 100%; background-color: #f4645f;
+}
+
+.footer > .cat-skill-item:nth-child(4) {
+    padding-bottom: 20px;
+}
