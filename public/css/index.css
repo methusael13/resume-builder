@@ -18,7 +18,7 @@ body {
 
 .logo {
     width: 100px; height: 100px;
-    background-image: url('/assets/images/dp-bw.jpg');
+    background-image: url('/assets/images/dp.jpg');
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;

@@ -1,0 +1,120 @@
+
+{
+    "title": "Profile",
+    "name": "Methusael Murmu",
+    "sub_title": "B. Tech undergraduate (Computer Science and Engineering)",
+    "about": {
+        "intro": "I'm an easygoing, organised and a self-motivated individual, who likes to develop, design and read. I love programming graphics, or anything closely related to it. I have a reasonable experience as a full stack web developer, and an eye for quality, irrespective of the task at hand. I mostly stick to the computer, but when not, you'll find me reading a novel or playing the guitar.",
+        "contact": {
+            "email": "iam.methusael@gmail.com",
+            "phone": "+917535079848",
+            "address": "Room. 202, Shri Bhagat Harbhaj Rai Sewa Sanstha, Kankhal, Haridwar, PIN - 249408"
+        }
+    },
+
+    "links": [
+        { "title": "GitHub", "src": "https://github.com/methusael13" },
+        { "title": "HackerRank", "src": "https://www.hackerrank.com/methusael" },
+        { "title": "HackerEarth", "src": "https://www.hackerearth.com/@methusael" },
+        { "title": "LinkedIn", "src": "https://www.linkedin.com/in/mithusayel-murmu-a8a976b7" },
+        { "title": "Blog", "src": "http://codersdiet.blogspot.in" }
+    ],
+    
+    "education": [
+        {
+            "alma": "Faculty of Engineering and Technology, GKV, Haridwar",
+            "duration": "2014 - 2018", "std": "B. Tech (CSE)",
+            "score": "73.00%"
+        },
+        {
+            "alma": "St. Francis Xavier's School, Kolkata",
+            "duration": "2011 - 2012", "std": "Class XI - XII",
+            "score": "89.75%"
+        },
+        {
+            "alma": "St. Xavier's School, Raiganj",
+            "duration": "2001 - 2010", "std": "Class I - X",
+            "score": "94.00%"
+        }
+    ],
+    
+    "projects": [
+        {
+            "title": "WhiteBoard",
+            "duration": "Jul - Aug, 2017",
+            "link": "https://github.com/imvpn22/whiteboard",
+            "desc": "A simple messaging and sketch streaming web app for brainstorming sessions"
+        },
+        {
+            "title": "Jnanagni 2017",
+            "duration": "Jan - Mar, 2017",
+            "link": "https://github.com/methusael13/jnanagni17",
+            "desc": "Official website for Jnanagni 2017 - FET, GKV's Annual Techfest"
+        },
+        {
+            "title": "Graphics Engine Using OpenGL",
+            "duration": "Jun - Jul, 2016",
+            "link": "https://github.com/methusael13/opengl-demo",
+            "desc": "A simple graphics engine framework for rapidly developing and prototyping OpenGL apps"
+        },
+        {
+            "title": "Weather Wiz",
+            "duration": "Jun - Jul, 2015",
+            "link": "https://github.com/methusael13/weather-wiz",
+            "desc": "Weather indicator widget for Linux panels"
+        },
+        {
+            "title": "Sketch",
+            "duration": "Jun - Jul, 2014",
+            "link": "https://github.com/methusael13/sketch",
+            "desc": "A Paint like application using Java"
+        }
+    ],
+
+    "skills": [
+        {
+            "graph": "true",
+            "category": "Programming Languages",
+            "topics": [
+                { "name": "Java", "perc": 90 }, { "name": "C++", "perc": 75 }, { "name": "C", "perc": 98 },
+                { "name": "Javascript", "perc": 90 }, { "name": "Python", "perc": 75 }, { "name": "PHP", "perc": 50 }
+            ]
+        },
+        {
+            "graph": "false",
+            "category": "Frameworks / Libraries",
+            "topics": [ "Laravel", "Node.js", "Socket.io", "OpenGL" ]
+        },
+        {
+            "graph": "false",
+            "category": "Operating System",
+            "topics": [ "GNU / Linux", "Windows" ]
+        }
+    ],
+
+    "workshops": [
+        {
+            "desc": "<strong>Vision Robotics</strong> with <em>Cognizance</em>, IIT Roorkee",
+            "date": "Mar, 2016"
+        },
+        {
+            "desc": "<strong>BlueMix Enablement</strong> at FET, GKV",
+            "date": "Mar, 2015"
+        },
+        {
+            "desc": "<strong>Ethical Hacking</strong> with <em>Robotryst</em>, IIT Delhi",
+            "date": "Feb - Mar, 2015"
+        },
+        {
+            "desc": "<strong>Basics of Web Technology</strong> with <em>KnowWorkshops | CSI - Haridwar Chapter</em>, FET, GKV",
+            "date": "Feb, 2015"
+        }
+    ],
+
+    "experiences": [
+        {
+            "desc": "Conducted a workshop for 1<sup>st</sup> and 2<sup>nd</sup> year students on <strong>Linux Essentials</strong>",
+            "date": "Oct, 2016"
+        }
+    ]
+}

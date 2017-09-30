@@ -1,263 +1,135 @@
 <!doctype html>
 <html>
-    <head>
-        <title>Profile</title>
-        <link rel="stylesheet" type="text/css" href="/css/index.css">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    </head>
-    <body>
-        <div class="container">
-            <div class="header">
-                <div class="logo"></div>
-                <div class="header-title-section">
-                    <div class="header-title">Mithusayel Murmu</div>
-                    <div class="header-subtitle">B. Tech undergraduate (Computer Science and Engineering)</div>
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo"></div>
+            <div class="header-title-section">
+                <div class="header-title"><%= name %></div>
+                <div class="header-subtitle"><%= sub_title %></div>
+            </div>
+        </div>
+        <div class="info-section">
+            <div class="info-col info-left">
+                <%- include('../components/cat_header', { catName: "About Me" }); %>
+                <div class="cat-def-body"><%= about.intro %></div>
+                <%- include('../components/cat_header', { catName: "Contact" }); %>
+                <div class="cat-contact-body">
+                    <div class="contact-item">
+                        <div class="contact-logo">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <div class="contact-info">
+                            <a href="mailto:<%= about.contact.email %>">
+                                <%= about.contact.email %>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-logo">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <div class="contact-info"><%= about.contact.phone %></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-logo">
+                            <i class="fa fa-address-card" aria-hidden="true"></i>
+                        </div>
+                        <div class="contact-info"><%= about.contact.address %></div>
+                    </div>
+                </div>
+                <%- include('../components/cat_header', { catName: "Links" }); %>
+                <div class="cat-list-body">
+                    <ul>
+                        <% links.forEach((link) => { %>
+                        <li><%- include('../components/link', { title: link.title, src: link.src }); %></li>
+                        <% }); %>
+                    </ul>
                 </div>
             </div>
-            <div class="info-section">
-                <div class="info-col info-left">
-                    <%- include('../components/cat_header', { catName: "About Me" }); %>
-                    <div class="cat-def-body">
-                        I'm an easygoing, organised and a self-motivated individual, who 
-                        likes to develop, design and read. I love programming graphics, or anything closely related to it. I have a reasonable experience as a full stack web developer, and an eye for quality, irrespective of the task at hand.
-                        I mostly stick to the computer, but when not, you'll find me reading a novel or playing the guitar.
-                    </div>
-                    <%- include('../components/cat_header', { catName: "Contact" }); %>
-                    <div class="cat-contact-body">
-                        <div class="contact-item">
-                            <div class="contact-logo">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                            </div>
-                            <div class="contact-info">
-                                <a href="mailto:iam.methusael@gmail.com">
-                                    iam.methusael@gmail.com
-                                </a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-logo">
-                                <i class="fa fa-phone" aria-hidden="true"></i>
-                            </div>
-                            <div class="contact-info">+917535079848</div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-logo">
-                                <i class="fa fa-address-card" aria-hidden="true"></i>
-                            </div>
-                            <div class="contact-info">
-                                Room. 202, Shri Bhagat Harbhaj Rai Sewa Sanstha,
-                                Kankhal, Haridwar, PIN - 249408
-                            </div>
-                        </div>
-                    </div>
-                    <%- include('../components/cat_header', { catName: "Links" }); %>
-                    <div class="cat-list-body">
-                        <ul>
-                            <li>
-                                <%-
-                                include('../components/link', {
-                                    title: 'GitHub', src: 'https://github.com/methusael13'
-                                });
-                                %>
-                            </li>
-                            <li>
-                                <%-
-                                include('../components/link', {
-                                    title: 'HackerRank', src: 'https://www.hackerrank.com/methusael'
-                                });
-                                %>
-                            </li>
-                            <li>
-                                <%-
-                                include('../components/link', {
-                                    title: 'HackerEarth', src: 'https://www.hackerearth.com/@methusael'
-                                });
-                                %>
-                            </li>
-                            <li>
-                                <%-
-                                include('../components/link', {
-                                    title: 'LinkedIn', src: 'https://www.linkedin.com/in/mithusayel-murmu-a8a976b7'
-                                });
-                                %>
-                            </li>
-                            <li>
-                                <%-
-                                include('../components/link', {
-                                    title: 'Blog', src: 'http://codersdiet.blogspot.in'
-                                });
-                                %>
-                            </li>
-                        </ul>
-                    </div>
+            <div class="info-col info-right">
+                <%- include('../components/cat_header', { catName: "Education" }); %>
+                <div class="cat-list-body">
+                    <ul>
+                        <% education.forEach((edu) => { %>
+                        <li>
+                            <%-
+                            include('../components/edu', { data:
+                                { alma: edu.alma, duration: edu.duration, std: edu.std, score: edu.score }
+                            });
+                            %>
+                        </li>
+                        <% }); %>
+                    </ul>
                 </div>
-                <div class="info-col info-right">
-                    <%- include('../components/cat_header', { catName: "Education" }); %>
-                    <div class="cat-list-body">
-                        <ul>
-                            <li>
-                                <%-
-                                include('../components/edu', { data: {
-                                    alma: "Faculty of Engineering and Technology, GKV, Haridwar",
-                                    duration: "2014 - 2018",
-                                    std: "B. Tech (CSE)",
-                                    score: "73.00"
-                                }});
-                                %>
-                            </li>
-                            <li>
-                                <%-
-                                include('../components/edu', { data: {
-                                    alma: "St. Francis Xavier's School, Kolkata",
-                                    duration: "2011 - 2012",
-                                    std: "Class XI - XII",
-                                    score: "89.75"
-                                }});
-                                %>
-                            </li>
-                            <li>
-                                <%-
-                                include('../components/edu', { data: {
-                                    alma: "St. Xavier's School, Raiganj",
-                                    duration: "2001 - 2010",
-                                    std: "Class I - X",
-                                    score: "94.00"
-                                }});
-                                %>
-                            </li>
-                        </ul>
-                    </div>
-                    <%- include('../components/cat_header', { catName: "Projects" }); %>
-                    <div class="cat-list-body">
-                        <ul>
-                            <li>
-                                <%-
-                                include('../components/project', { data :{
-                                    title: 'WhiteBoard',
-                                    duration: 'Jul - Aug, 2017',
-                                    link: 'https://github.com/imvpn22/whiteboard',
-                                    desc: 'A simple messaging and sketch streaming web app for brainstorming sessions'
-                                }});
-                                %>
-                            </li>
-                            <li>
-                                <%-
-                                include('../components/project', { data :{
-                                    title: 'Jnanagni 2017',
-                                    duration: 'Jan - Mar, 2017',
-                                    link: 'https://github.com/methusael13/jnanagni17',
-                                    desc: 'Official website for Jnanagni 2017 - FET, GKV\'s Annual Techfest'
-                                }});
-                                %>
-                            </li>
-                            <li>
-                                <%-
-                                include('../components/project', { data :{
-                                    title: 'Graphics Engine Using OpenGL',
-                                    duration: 'Jun - Jul, 2016',
-                                    link: 'https://github.com/methusael13/opengl-demo',
-                                    desc: 'A simple graphics engine framework for rapidly developing and prototyping OpenGL apps'
-                                }});
-                                %>
-                            </li>
-                            <li>
-                                <%-
-                                include('../components/project', { data :{
-                                    title: 'Weather Wiz',
-                                    duration: 'Jun - Jul, 2015',
-                                    link: 'https://github.com/methusael13/weather-wiz',
-                                    desc: 'Weather indicator widget for Linux panels'
-                                }});
-                                %>
-                            </li>
-                            <li>
-                                <%-
-                                include('../components/project', { data :{
-                                    title: 'Sketch',
-                                    duration: 'Jun - Jul, 2014',
-                                    link: 'https://github.com/methusael13/sketch',
-                                    desc: 'A Paint like application using Java'
-                                }});
-                                %>
-                            </li>
-                        </ul>
-                    </div>
+                <%- include('../components/cat_header', { catName: "Projects" }); %>
+                <div class="cat-list-body">
+                    <ul>
+                        <% projects.forEach((proj) => { %>
+                        <li>
+                            <%-
+                            include('../components/project', { data:
+                                { title: proj.title, duration: proj.duration, link: proj.link, desc: proj.desc }
+                            });
+                            %>
+                        </li>
+                        <% }); %>
+                    </ul>
                 </div>
             </div>
-            <div class="footer">
-                <%- include('../components/cat_header', { catName: "Skills" }); %>
-                <div class="cat-skill-item"><div class="cat-skill-type">Programming Languages</div>
-                <div class="cat-skill-body">
-                    <%- include('../components/skill', { skill: 'Java', perc: 90 }); %>
-                    <%- include('../components/skill', { skill: 'C++', perc: 75 }); %>
-                    <%- include('../components/skill', { skill: 'C', perc: 98 }); %>
-                    <%- include('../components/skill', { skill: 'Javascript', perc: 90 }); %>
-                    <%- include('../components/skill', { skill: 'Python', perc: 65 }); %>
-                    <%- include('../components/skill', { skill: 'PHP', perc: 50 }); %>
+        </div>
+        <div class="footer">
+            <%- include('../components/cat_header', { catName: "Skills" }); %>
+            <% skills.forEach((skill) => { %>
+                <%
+                let type_klass = "cat-skill-type";
+                let body_klass = "cat-skill-body";
+
+                if (skill.graph == "false") { type_klass += " force-inline"; body_klass += "-gen"; }
+                %>
+                <div class="cat-skill-item"><div class="<%= type_klass %>"><%= skill.category %></div>
+                <div class="<%= body_klass %>">
+                    <% if (skill.graph == "true") { %>
+                    <% skill.topics.forEach((topic) => { %>
+                    <%- include('../components/skill', { skill: topic.name, perc: topic.perc }); %>
+                    <% }); %>
+                    <% } else { %>
+                    <% skill.topics.forEach((topic) => { %>
+                    <div class="skill-gen"><%= topic %></div>
+                    <% }); %>
+                    <% } %>
                 </div></div>
-                <div class="cat-skill-item"><div class="cat-skill-type force-inline">Frameworks / Libraries</div>
-                <div class="cat-skill-body-gen">
-                    <div class="skill-gen">Laravel</div>
-                    <div class="skill-gen">Node.js</div>
-                    <div class="skill-gen">Socket.io</div>
-                    <div class="skill-gen">OpenGL</div>
-                </div></div>
-                <div class="cat-skill-item"><div class="cat-skill-type force-inline">Operating Systems</div>
-                <div class="cat-skill-body-gen">
-                    <div class="skill-gen">GNU / Linux</div>
-                    <div class="skill-gen">Windows</div>
-                </div></div>
+                <% }); %>
                 <%- include('../components/cat_header', { catName: "Workshops" }); %>
                 <div class="cat-list-body">
                     <ul>
-                        <li>
-                            <div class="ach-item">
-                                <span class="ach-title">
-                                    <strong>Vision Robotics</strong> with <em>Cognizance</em>, IIT Roorkee
-                                </span>
-                                <span class="ach-duration">Mar, 2016</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="ach-item">
-                                <span class="ach-title">
-                                    <strong>BlueMix Enablement</strong> at FET, GKV
-                                </span>
-                                <span class="ach-duration">Mar, 2015</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="ach-item">
-                                <span class="ach-title">
-                                    <strong>Ethical Hacking</strong> with <em>Robotryst</em>, IIT Delhi
-                                </span>
-                                <span class="ach-duration">Feb - Mar, 2015</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="ach-item">
-                                <span class="ach-title">
-                                    <strong>Basics of Web Technology</strong> with <em>KnowWorkshops | CSI - Haridwar Chapter</em>, FET, GKV
-                                </span>
-                                <span class="ach-duration">Feb, 2015</span>
-                            </div>
-                        </li>
+                        <% workshops.forEach((wshop) => { %>
+                        <li><%- include('../components/ach_item', { desc: wshop.desc, date: wshop.date }); %></li>
+                        <% }); %>
                     </ul>
                 </div>
                 <%- include('../components/cat_header', { catName: "Experience" }); %>
                 <div class="cat-list-body">
                     <ul>
-                        <li>
-                            <div class="ach-item">
-                                <span class="ach-title">
-                                    Conducted a workshop for 1<sup>st</sup> and 2<sup>nd</sup> year students on <strong>Linux Essentials</strong>
-                                </span>
-                                <span class="ach-duration">Oct, 2016</span>
-                            </div>
-                        </li>
+                        <% experiences.forEach((exp) => { %>
+                        <li><%- include('../components/ach_item', { desc: exp.desc, date: exp.date }); %></li>
+                        <% }); %>
                     </ul>
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+            window.addEventListener("load", () => {
+                let desc = document.getElementsByClassName("ach-title");
+                for (let i = 0; i < desc.length; i++) {
+                    desc[i].innerHTML = desc[i].innerText;
+                };
+            }, false);
+        </script>
     </body>
-</html>
+    </html>
