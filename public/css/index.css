@@ -154,6 +154,7 @@ a { text-decoration: none; color: #f4645f; }
 /* Skills */
 .force-inline { display: inline-block !important; }
 .cat-skill-type {
+    min-width: 13.5em;
     font-family: 'Roboto Condensed';
     padding: 10px 10px 5px 50px; color: #888;
     font-size: 0.8em; letter-spacing: 0.1em;
