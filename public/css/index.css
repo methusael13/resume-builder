@@ -192,6 +192,4 @@ a { text-decoration: none; color: #f4645f; }
     height: 100%; background-color: #f4645f;
 }
 
-.footer > .cat-skill-item:nth-child(4) {
-    padding-bottom: 20px;
-}
+.pad-bottom-extra { padding-bottom: 20px; }

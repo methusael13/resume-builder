@@ -89,6 +89,11 @@
             "graph": "false",
             "category": "Operating System",
             "topics": [ "GNU / Linux", "Windows" ]
+        },
+        {
+            "graph": "false",
+            "category": "Languages",
+            "topics": [ "English", "Hindi", "Bengali", "Santhali" ]
         }
     ],
 
