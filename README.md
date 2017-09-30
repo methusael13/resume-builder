@@ -1,2 +1,2 @@
-# resume-builder
+# Resumé Builder
 Web resume template
