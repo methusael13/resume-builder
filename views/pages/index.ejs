@@ -97,47 +97,47 @@
                 <div class="cat-skill-item"><div class="<%= type_klass %>"><%= skill.category %></div>
                 <div class="<%= body_klass %>">
                     <% if (skill.graph == "true") { %>
-                    <% skill.topics.forEach((topic) => { %>
-                    <%- include('../components/skill', { skill: topic.name, perc: topic.perc }); %>
-                    <% }); %>
+                        <% skill.topics.forEach((topic) => { %>
+                            <%- include('../components/skill', { skill: topic.name, perc: topic.perc }); %>
+                        <% }); %>
                     <% } else { %>
-                    <% skill.topics.forEach((topic) => { %>
-                    <div class="skill-gen"><%= topic %></div>
-                    <% }); %>
+                        <% skill.topics.forEach((topic) => { %>
+                            <div class="skill-gen"><%= topic %></div>
+                        <% }); %>
                     <% } %>
                 </div></div>
-                <% }); %>
-                <%- include('../components/cat_header', { catName: "Workshops" }); %>
-                <div class="cat-list-body">
-                    <ul>
-                        <% workshops.forEach((wshop) => { %>
-                        <li><%- include('../components/ach_item', { desc: wshop.desc, date: wshop.date }); %></li>
-                        <% }); %>
-                    </ul>
-                </div>
-                <%- include('../components/cat_header', { catName: "Experience" }); %>
-                <div class="cat-list-body">
-                    <ul>
-                        <% experiences.forEach((exp) => { %>
-                        <li><%- include('../components/ach_item', { desc: exp.desc, date: exp.date }); %></li>
-                        <% }); %>
-                    </ul>
-                </div>
+            <% }); %>
+            <%- include('../components/cat_header', { catName: "Workshops" }); %>
+            <div class="cat-list-body">
+                <ul>
+                    <% workshops.forEach((wshop) => { %>
+                    <li><%- include('../components/ach_item', { desc: wshop.desc, date: wshop.date }); %></li>
+                    <% }); %>
+                </ul>
+            </div>
+            <%- include('../components/cat_header', { catName: "Experience" }); %>
+            <div class="cat-list-body">
+                <ul>
+                    <% experiences.forEach((exp) => { %>
+                    <li><%- include('../components/ach_item', { desc: exp.desc, date: exp.date }); %></li>
+                    <% }); %>
+                </ul>
             </div>
         </div>
-        <script type="text/javascript">
-            window.addEventListener("load", () => {
-                let desc = document.getElementsByClassName("ach-title");
-                for (let i = 0; i < desc.length; i++) {
-                    desc[i].innerHTML = desc[i].innerText;
-                };
+    </div>
+    <script type="text/javascript">
+        window.addEventListener("load", () => {
+            let desc = document.getElementsByClassName("ach-title");
+            for (let i = 0; i < desc.length; i++) {
+                desc[i].innerHTML = desc[i].innerText;
+            };
 
-                // Extra padding for last skill item
-                let skillItems = document.querySelectorAll(".footer > .cat-skill-item");
-                if (skillItems) {
-                    skillItems[skillItems.length-1].classList.add("pad-bottom-extra");
-                }
-            }, false);
-        </script>
-    </body>
-    </html>
+            // Extra padding for last skill item
+            let skillItems = document.querySelectorAll(".footer > .cat-skill-item");
+            if (skillItems) {
+                skillItems[skillItems.length-1].classList.add("pad-bottom-extra");
+            }
+        }, false);
+    </script>
+</body>
+</html>
