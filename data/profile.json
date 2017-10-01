@@ -97,29 +97,36 @@
         }
     ],
 
-    "workshops": [
+    "events": [
         {
-            "desc": "<strong>Vision Robotics</strong> with <em>Cognizance</em>, IIT Roorkee",
-            "date": "Mar, 2016"
+            "title": "Workshops",
+            "body": [
+                {
+                    "desc": "<strong>Vision Robotics</strong> with <em>Cognizance</em>, IIT Roorkee",
+                    "date": "Mar, 2016"
+                },
+                {
+                    "desc": "<strong>BlueMix Enablement</strong> at FET, GKV",
+                    "date": "Mar, 2015"
+                },
+                {
+                    "desc": "<strong>Ethical Hacking</strong> with <em>Robotryst</em>, IIT Delhi",
+                    "date": "Feb - Mar, 2015"
+                },
+                {
+                    "desc": "<strong>Basics of Web Technology</strong> with <em>KnowWorkshops</em> | <em>CSI - Haridwar Chapter</em>, FET, GKV",
+                    "date": "Feb, 2015"
+                }
+            ]
         },
         {
-            "desc": "<strong>BlueMix Enablement</strong> at FET, GKV",
-            "date": "Mar, 2015"
-        },
-        {
-            "desc": "<strong>Ethical Hacking</strong> with <em>Robotryst</em>, IIT Delhi",
-            "date": "Feb - Mar, 2015"
-        },
-        {
-            "desc": "<strong>Basics of Web Technology</strong> with <em>KnowWorkshops | CSI - Haridwar Chapter</em>, FET, GKV",
-            "date": "Feb, 2015"
-        }
-    ],
-
-    "experiences": [
-        {
-            "desc": "Conducted a workshop for 1<sup>st</sup> and 2<sup>nd</sup> year students on <strong>Linux Essentials</strong>",
-            "date": "Oct, 2016"
+            "title": "Experiences",
+            "body": [
+                {
+                    "desc": "Conducted a workshop for 1<sup>st</sup> and 2<sup>nd</sup> year students on <strong>Linux Essentials</strong>",
+                    "date": "Oct, 2016"
+                }
+            ]
         }
     ]
 }

@@ -107,22 +107,18 @@
                     <% } %>
                 </div></div>
             <% }); %>
-            <%- include('../components/cat_header', { catName: "Workshops" }); %>
-            <div class="cat-list-body">
-                <ul>
-                    <% workshops.forEach((wshop) => { %>
-                    <li><%- include('../components/ach_item', { desc: wshop.desc, date: wshop.date }); %></li>
-                    <% }); %>
-                </ul>
-            </div>
-            <%- include('../components/cat_header', { catName: "Experience" }); %>
-            <div class="cat-list-body">
-                <ul>
-                    <% experiences.forEach((exp) => { %>
-                    <li><%- include('../components/ach_item', { desc: exp.desc, date: exp.date }); %></li>
-                    <% }); %>
-                </ul>
-            </div>
+            <% if (events) { %>
+                <% events.forEach((event) => { %>
+                    <%- include('../components/cat_header', { catName: event.title }); %>
+                    <div class="cat-list-body">
+                        <ul>
+                            <% event.body.forEach((data) => { %>
+                            <li><%- include('../components/ach_item', { desc: data.desc, date: data.date }); %></li>
+                            <% }); %>
+                        </ul>
+                    </div>
+                <% }); %>
+            <% } %>
         </div>
     </div>
     <script type="text/javascript">
