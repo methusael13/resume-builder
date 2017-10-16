@@ -1,7 +1,7 @@
 
 {
     "title": "Profile",
-    "name": "Methusael Murmu",
+    "name": "Mithusayel Murmu",
     "sub_title": "B. Tech undergraduate (Computer Science and Engineering)",
     "about": {
         "intro": "I'm an easygoing, organised and a self-motivated individual, who likes to develop, design and read. I love programming graphics, or anything closely related to it. I have a reasonable experience as a full stack web developer, and an eye for quality, irrespective of the task at hand. I mostly stick to the computer, but when not, you'll find me reading a novel or playing the guitar.",
@@ -39,6 +39,12 @@
     ],
     
     "projects": [
+        {
+            "title": "PhyRay",
+            "duration": "Oct 2017 - Present",
+            "link": "https://github.com/methusael13/phy-ray",
+            "desc": "A 3D ray tracer based on physically based rendering"
+        },
         {
             "title": "WhiteBoard",
             "duration": "Jul - Aug, 2017",
