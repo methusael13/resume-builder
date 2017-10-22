@@ -41,7 +41,7 @@
     "projects": [
         {
             "title": "PhyRay",
-            "duration": "Oct 2017 - Present",
+            "duration": "Oct, 2017 - Present",
             "link": "https://github.com/methusael13/phy-ray",
             "desc": "A 3D ray tracer based on physically based rendering"
         },
