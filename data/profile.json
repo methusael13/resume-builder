@@ -24,16 +24,16 @@
         {
             "alma": "Faculty of Engineering and Technology, GKV, Haridwar",
             "duration": "2014 - 2018", "std": "B. Tech (CSE)",
-            "score": "73.00%"
+            "score": "71.90%"
         },
         {
             "alma": "St. Francis Xavier's School, Kolkata",
-            "duration": "2011 - 2012", "std": "Class XI - XII",
+            "duration": "2011 - 2013", "std": "Class XI - XII",
             "score": "89.75%"
         },
         {
             "alma": "St. Xavier's School, Raiganj",
-            "duration": "2001 - 2010", "std": "Class I - X",
+            "duration": "2001 - 2011", "std": "Class I - X",
             "score": "94.00%"
         }
     ],
@@ -82,8 +82,8 @@
             "graph": "true",
             "category": "Programming Languages",
             "topics": [
-                { "name": "Java", "perc": 90 }, { "name": "C++", "perc": 75 }, { "name": "C", "perc": 98 },
-                { "name": "Javascript", "perc": 90 }, { "name": "Python", "perc": 75 }, { "name": "PHP", "perc": 50 }
+                { "name": "Java", "perc": 85 }, { "name": "C++", "perc": 75 }, { "name": "C", "perc": 95 },
+                { "name": "Javascript", "perc": 90 }, { "name": "Python", "perc": 85 }, { "name": "PHP", "perc": 50 }
             ]
         },
         {
@@ -122,6 +122,15 @@
                 {
                     "desc": "<strong>Basics of Web Technology</strong> with <em>KnowWorkshops</em> | <em>CSI - Haridwar Chapter</em>, FET, GKV",
                     "date": "Feb, 2015"
+                }
+            ]
+        },
+        {
+            "title": "Certifications",
+            "body": [
+                {
+                    "desc": "<strong>Introduction to Modern Application Development</strong>, certified by <em>NPTEL (IIT Madras) and Hasura</em>. Ranked at <strong>top one percentile</strong>.<br><a href=\"http://nptel.ac.in/noc/social_cert/noc17-cs40/NPTEL17CS40S2250082171013485.jpg\" target=\"_blank\">See certificate</a>",
+                    "date": "Sep 24, 2017"
                 }
             ]
         },
