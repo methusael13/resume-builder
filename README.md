@@ -2,10 +2,22 @@
 Web resume template
 
 #### Change profile data
-The profile data can be modified at `data/profile.json`
+The profile data can be modified at _`data/profile.json`_.
 
 #### Change profile picture
-Replace `public/assets/images/dp.jpg` with an image of your own.
+Add an image of your own in _`public/assets/images`_, and then pass the link to that image in **`profile.json`** as given below:
+```json
+imageUrl: "/assets/images/<file>"
+```
+
+#### Change theme
+The theme exposes only two configurable colors in **`profile.json`**. You can modify them to your liking.
+```json
+theme: {
+  "primary": "#f4645f",
+  "category-headers": "#607D8B"
+}
+```
 
 ### Building
 - Download `nodejs` and `npm` for your platform
@@ -28,7 +40,7 @@ npm install
 
 - Run Node.js server
 ```
-node server.js
+npm start
 ```
 
 - Open your favourite browser and browse to `http://localhost:8080`

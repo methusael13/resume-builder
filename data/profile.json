@@ -2,78 +2,119 @@
 {
     "title": "Profile",
     "name": "Mithusayel Murmu",
-    "sub_title": "B. Tech undergraduate (Computer Science and Engineering)",
+    "subTitle": "Softaware Engineer at mroads (Paññã)",
+    "imageUrl": "/assets/images/avatar.jpg",
+    "theme": {
+        "primary": "#f4645f",
+        "category-headers": "#607D8B"
+    },
     "about": {
-        "intro": "I'm an easygoing, organised and a self-motivated individual, who likes to develop, design and read. I love programming graphics, or anything closely related to it. I have a reasonable experience as a full stack web developer, and an eye for quality, irrespective of the task at hand. I mostly stick to the computer, but when not, you'll find me reading a novel or playing the guitar.",
         "contact": {
             "email": "iam.methusael@gmail.com",
-            "phone": "+917535079848",
-            "address": "Room. 202, Shri Bhagat Harbhaj Rai Sewa Sanstha, Kankhal, Haridwar, PIN - 249408"
-        }
+            "phone": "+91xxxxxxxxxx",
+            "address": "Earth, Solar System, Milky Way"
+        },
+        "intro": "Hello, World. I'm a <insert your bio / summary here>"
     },
 
     "links": [
+        { "title": "LinkedIn", "src": "https://www.linkedin.com/in/methusael/" },
         { "title": "GitHub", "src": "https://github.com/methusael13" },
         { "title": "HackerRank", "src": "https://www.hackerrank.com/methusael" },
         { "title": "HackerEarth", "src": "https://www.hackerearth.com/@methusael" },
-        { "title": "LinkedIn", "src": "https://www.linkedin.com/in/mithusayel-murmu-a8a976b7" },
-        { "title": "Blog", "src": "http://codersdiet.blogspot.in" }
+        { "title": "LeetCode", "src": "https://leetcode.com/methusael13/" }
     ],
-    
+
     "education": [
         {
             "alma": "Faculty of Engineering and Technology, GKV, Haridwar",
-            "duration": "2014 - 2018", "std": "B. Tech (CSE)",
+            "duration": "2014 - 2018", "std": "Bachelor of Technology (Computer Science and Engineering)",
             "score": "71.90%"
         },
         {
             "alma": "St. Francis Xavier's School, Kolkata",
-            "duration": "2011 - 2013", "std": "Class XI - XII",
+            "duration": "2011 - 2013", "std": "Indian School Certificate (CISCE)",
             "score": "89.75%"
         },
         {
             "alma": "St. Xavier's School, Raiganj",
-            "duration": "2001 - 2011", "std": "Class I - X",
+            "duration": "2001 - 2011", "std": "Indian Certificate of Secondary Education (CISCE)",
             "score": "94.00%"
         }
     ],
-    
+
+    "workExp": [
+        {
+            "title": "mroads (Paññã)",
+            "duration": "Full Stack Developer, (July, 2018 - Present)",
+            "desc": [
+                "Developed an online and <strong>collaborative IDE</strong> (PaññãCodeEditor) for use in our interview platform in Angular. The IDE is tabbed based, with support for project workspaces for several languages and frameworks, including but not limited to <strong>C++</strong>, <strong>Java</strong>, <strong>JS</strong>, <strong>Android</strong>, <strong>Scala</strong>, etc., with a live preview for web-based projects. It uses <strong>Microsoft's Monaco</strong> as the core editor, and runs completely on the user's browser.",
+                "Created an <strong>interactive visualisation</strong> in 3D using <strong>WebGL</strong> for our Services website, making extensive use of <strong>GPGPU particles and 3D Simplex and Curl Noise</strong>.",
+                "Re-architected the back-end for online code execution service to be significantly more scalable, robust and stable than the previous release."
+            ]
+        },
+        {
+            "title": "mroads (Paññã)",
+            "duration": "Software Engineer Intern, (Feb, 2018 - July, 2018)",
+            "desc": [
+                "Ported our entire online code execution service for our interview platform to the latest stack using <strong>Java Spring Boot</strong>, <strong>Karaf</strong>, and <strong>Angular 6</strong>, while optimizing it for faster overall performance."
+            ]
+        },
+        {
+            "title": "Hasura",
+            "duration": "Product Development Intern, (Dec, 2017 - Feb, 2018)",
+            "desc": [
+                "Created a React app with a Node.js back-end as a <strong>Kubernetes Mircroservice</strong> built on top of <strong>Hasura's BaaS platform</strong>, to serve as an automated customer support service using <strong>Intercom</strong>."
+            ]
+        }
+    ],
+
     "projects": [
+        {
+            "title": "Progenet",
+            "duration": "Dec, 2017 - March, 2018",
+            "desc": [
+                "Progenet, our submission for our undergrad Major Project, is our take on creating a planetary scale procedurally rendered spherical terrain with real-time realistic atmospheric scattering. The planet itself is therefore a function of few parameters that define how it is generated in real-time in the GPU.",
+                "The planet is generated from a base Icosahedron geometry that provides equispaced vertices that later reduces artifacts while height generation. To generate the elevation for each vertices on the planet we use 3D Simplex Noise, which is a coherent random function returning a normalized height value. This value can be later scaled to the required height. To make the terrains interesting, multiple octaves of the noise function are used with increasing frequency and decreasing amplitude.",
+                "Since the planet is to be observed from space as well as from ground-level, we use Continuous Level of Detail to dynamically subdivide the base geometry to generate more detail as required. Since CDLOD generates a too large a number of vertices to be pushed to the GPU, we implement Backface and Frustum culling to discard vertices not in view.",
+                "Progenet is completely developed in C++ with some constructs from C++11, and built using CMake and Make."
+            ]
+        },
         {
             "title": "PhyRay",
             "duration": "Oct, 2017 - Present",
             "link": "https://github.com/methusael13/phy-ray",
-            "desc": "A 3D ray tracer based on physically based rendering"
+            "desc": "We developed a physically based 3D ray tracer supporting rendering of basic objects with global illumination and area, sun and point lights. The software written entirely from scratch in C/C++, takes as input a 3D scene model and outputs a 2D raster image. It uses actual light transport physics, physically accurate models of object surfaces and materials and a reasonably accurate camera model to generate images that are indistinguishable from an actual photograph of the depicted scene."
         },
         {
             "title": "WhiteBoard",
             "duration": "Jul - Aug, 2017",
             "link": "https://github.com/imvpn22/whiteboard",
-            "desc": "A simple messaging and sketch streaming web app for brainstorming sessions"
+            "desc": "A simple web-app for collaborative brainstorming sessions. The app includes a real-time messaging and sketching platform for collaboration with Peers. Developed using Node.js, Express, Socket.io and vanilla JS."
         },
         {
             "title": "Jnanagni 2017",
             "duration": "Jan - Mar, 2017",
             "link": "https://github.com/methusael13/jnanagni17",
-            "desc": "Official website for Jnanagni 2017 - FET, GKV's Annual Techfest"
+            "desc": "Official website for Jnanagni 2017, FET GKV's annual techfest, built using PHP, Laravel and Javascript."
         },
         {
-            "title": "Graphics Engine Using OpenGL",
+            "title": "Bazel",
             "duration": "Jun - Jul, 2016",
             "link": "https://github.com/methusael13/opengl-demo",
-            "desc": "A simple graphics engine framework for rapidly developing and prototyping OpenGL apps"
+            "desc": "A 3D graphics engine framework built in C/C++, for rapidly developing and prototyping OpenGL apps. Supported features include, OBJ model loading, texture management (supports diffuse, specular and normal maps), text rendering, a basic animation framework, FPS camera, and an abstracted shader manager. Currently supported OpenGL API versions: [3.0, 3.3]."
         },
         {
             "title": "Weather Wiz",
             "duration": "Jun - Jul, 2015",
             "link": "https://github.com/methusael13/weather-wiz",
-            "desc": "Weather indicator widget for Linux panels"
+            "desc": "Weather indicator widget for Linux (GNOME and KDE panels) using Weather Undeground's data API."
         },
         {
             "title": "Sketch",
             "duration": "Jun - Jul, 2014",
             "link": "https://github.com/methusael13/sketch",
-            "desc": "A Paint like application using Java"
+            "desc": "A 2D raster drawing app made using Java (Swing)."
         }
     ],
 
@@ -83,27 +124,36 @@
             "category": "Programming Languages",
             "topics": [
                 { "name": "Java", "perc": 85 }, { "name": "C++", "perc": 75 }, { "name": "C", "perc": 95 },
-                { "name": "Javascript", "perc": 90 }, { "name": "Python", "perc": 85 }, { "name": "PHP", "perc": 50 }
+                { "name": "Javascript", "perc": 90 }, { "name": "Python", "perc": 85 }
             ]
         },
         {
             "graph": "false",
             "category": "Frameworks / Libraries",
-            "topics": [ "Laravel", "Node.js", "Socket.io", "OpenGL" ]
+            "topics": [ "Angular", "ReactJS", "Node.js", "Socket.io", "OpenGL" ]
         },
         {
             "graph": "false",
             "category": "Operating System",
-            "topics": [ "GNU / Linux", "Windows" ]
+            "topics": [ "GNU / Linux", "Mac OS", "Windows" ]
         },
         {
             "graph": "false",
             "category": "Languages",
-            "topics": [ "English", "Hindi", "Bengali", "Santhali" ]
+            "topics": [ "English", "Hindi", "Bengali" ]
         }
     ],
 
     "events": [
+        {
+            "title": "Certifications",
+            "body": [
+                {
+                    "desc": "<strong>Introduction to Modern Application Development</strong>, certified by <em>NPTEL (IIT Madras) and Hasura</em>. Ranked at <strong>top one percentile</strong>.<br><a href=\"http://nptel.ac.in/noc/social_cert/noc17-cs40/NPTEL17CS40S2250082171013485.jpg\" target=\"_blank\">See certificate</a>",
+                    "date": "Sep 24, 2017"
+                }
+            ]
+        },
         {
             "title": "Workshops",
             "body": [
@@ -126,16 +176,7 @@
             ]
         },
         {
-            "title": "Certifications",
-            "body": [
-                {
-                    "desc": "<strong>Introduction to Modern Application Development</strong>, certified by <em>NPTEL (IIT Madras) and Hasura</em>. Ranked at <strong>top one percentile</strong>.<br><a href=\"http://nptel.ac.in/noc/social_cert/noc17-cs40/NPTEL17CS40S2250082171013485.jpg\" target=\"_blank\">See certificate</a>",
-                    "date": "Sep 24, 2017"
-                }
-            ]
-        },
-        {
-            "title": "Experiences",
+            "title": "Extra Curricular Activities",
             "body": [
                 {
                     "desc": "Conducted a workshop for 1<sup>st</sup> and 2<sup>nd</sup> year students on <strong>Linux Essentials</strong>",

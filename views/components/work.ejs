@@ -1,0 +1,18 @@
+<div class="project-header">
+    <span class="project-title"><%= data.title %></span>
+    <span class="project-duration"><%= data.duration %></span>
+</div>
+<% if (data.link) { %>
+<div class="project-link">
+    <a href="<%= data.link %>" target="_blank"><%= data.link %></a>
+</div>
+<% } %>
+<div class="project-desc work">
+    <ul class="work-desc-list">
+    <% data.desc.forEach((line) => { %>
+        <li class="work-desc-line">
+            <span><%- line %></span>
+        </li>
+    <% }); %>
+    </ul>
+</div>

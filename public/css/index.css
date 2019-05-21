@@ -20,7 +20,6 @@ body {
 .logo {
     width: 100px; height: 100px;
     min-width: 100px;
-    background-image: url('/assets/images/dp.jpg');
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -67,7 +66,7 @@ body {
     border-bottom: 1px solid #f0f0f0;
 }
 .cat-indicator {
-    color: #f4645f;
+    color: var(--theme-primary);
 }
 .cat-title {
     font-family: "Source Sans Pro";
@@ -75,6 +74,7 @@ body {
     letter-spacing: 5px;
     vertical-align: text-bottom;
     padding-left: 10px;
+    color: var(--theme-category-headers);
 }
 .cat-def-body, .cat-skill-body {
     padding: 10px 5px 10px 30px;
@@ -86,7 +86,7 @@ body {
     display: flex; padding: 10px 0;
 }
 .contact-logo {
-    color: #f4645f;
+    color: var(--theme-primary);
 }
 .contact-info {
     padding-left: 18px;
@@ -105,7 +105,7 @@ body {
 }
 
 /* Links */
-a { text-decoration: none; color: #f4645f; }
+a { text-decoration: none; color: var(--theme-primary); }
 .link-title {
     font-size: 1.1em; font-weight: 600;
     color: #222;
@@ -131,7 +131,8 @@ a { text-decoration: none; color: #f4645f; }
 }
 .edu-score {
     margin-left: 20px; padding: 2px 8px;
-    background-color: #f4645f; color: #fff;
+    background-color: var(--theme-primary);
+    color: #fff;
     border-radius: 20px;
 }
 
@@ -152,6 +153,9 @@ a { text-decoration: none; color: #f4645f; }
     border-left: 2px solid beige;
     font-style: italic;
 }
+.project-desc.work {
+    border-left: none;
+}
 
 /* Skills */
 .force-inline { display: inline-block !important; }
@@ -165,7 +169,7 @@ a { text-decoration: none; color: #f4645f; }
 .cat-skill-type:before {
     content: '\25c6';
     margin-top: -0.10em; position: absolute;
-    margin-left: -1.5em; color: #f4645f;
+    margin-left: -1.5em; color: var(--theme-primary);
 }
 .cat-skill-body {
     display: flex; flex-wrap: wrap;
@@ -192,7 +196,15 @@ a { text-decoration: none; color: #f4645f; }
     background-color: #eee; margin-top: 6px;
 }
 .skill-progress {
-    height: 100%; background-color: #f4645f;
+    height: 100%; background-color: var(--theme-primary);
 }
 
 .pad-bottom-extra { padding-bottom: 20px; }
+
+.work-desc-list {
+    list-style-type: square !important;
+    padding-left: 0 !important;
+}
+.work-desc-line {
+    padding: 0 !important;
+}

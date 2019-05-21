@@ -8,5 +8,11 @@
     </a>
 </div>
 <div class="project-desc">
+<% if (typeof data.desc === 'object') { %>
+    <% data.desc.forEach(d => { %>
+    <%= d %></br></br>
+    <% }); %>
+<% } else { %>
     <%= data.desc %>
+<% } %>
 </div>

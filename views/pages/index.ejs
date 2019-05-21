@@ -10,16 +10,18 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo"></div>
+            <div class="logo" style="background-image: url('<%= imageUrl %>')"></div>
             <div class="header-title-section">
                 <div class="header-title"><%= name %></div>
-                <div class="header-subtitle"><%= sub_title %></div>
+                <div class="header-subtitle"><%= subTitle %></div>
             </div>
         </div>
         <div class="info-section">
             <div class="info-col info-left">
-                <%- include('../components/cat_header', { catName: "About Me" }); %>
-                <div class="cat-def-body"><%= about.intro %></div>
+                <% if (about.intro) { %>
+                    <%- include('../components/cat_header', { catName: "About Me" }); %>
+                    <div class="cat-def-body"><%= about.intro %></div>
+                <% } %>
                 <%- include('../components/cat_header', { catName: "Contact" }); %>
                 <div class="cat-contact-body">
                     <div class="contact-item">
@@ -32,18 +34,22 @@
                             </a>
                         </div>
                     </div>
+                    <% if (about.contact.phone) { %>
                     <div class="contact-item">
                         <div class="contact-logo">
                             <i class="fa fa-phone" aria-hidden="true"></i>
                         </div>
                         <div class="contact-info"><%= about.contact.phone %></div>
                     </div>
+                    <% } %>
+                    <% if (about.contact.address) { %>
                     <div class="contact-item">
                         <div class="contact-logo">
                             <i class="fa fa-address-card" aria-hidden="true"></i>
                         </div>
                         <div class="contact-info"><%= about.contact.address %></div>
                     </div>
+                    <% } %>
                 </div>
                 <%- include('../components/cat_header', { catName: "Links" }); %>
                 <div class="cat-list-body">
@@ -55,35 +61,49 @@
                 </div>
             </div>
             <div class="info-col info-right">
-                <%- include('../components/cat_header', { catName: "Education" }); %>
+                <%- include('../components/cat_header', { catName: "Work Experience" }); %>
                 <div class="cat-list-body">
                     <ul>
-                        <% education.forEach((edu) => { %>
+                    <% workExp.forEach((work) => { %>
                         <li>
-                            <%-
-                            include('../components/edu', { data:
-                                { alma: edu.alma, duration: edu.duration, std: edu.std, score: edu.score }
+                        <%-
+                            include('../components/work', {
+                                data: { title: work.title, duration: work.duration, desc: work.desc }
                             });
-                            %>
+                        %>
                         </li>
-                        <% }); %>
-                    </ul>
-                </div>
-                <%- include('../components/cat_header', { catName: "Projects" }); %>
-                <div class="cat-list-body">
-                    <ul>
-                        <% projects.forEach((proj) => { %>
-                        <li>
-                            <%-
-                            include('../components/project', { data:
-                                { title: proj.title, duration: proj.duration, link: proj.link, desc: proj.desc }
-                            });
-                            %>
-                        </li>
-                        <% }); %>
+                    <% }); %>
                     </ul>
                 </div>
             </div>
+        </div>
+        <%- include('../components/cat_header', { catName: "Education" }); %>
+        <div class="cat-list-body">
+            <ul>
+                <% education.forEach((edu) => { %>
+                <li>
+                    <%-
+                    include('../components/edu', { data:
+                        { alma: edu.alma, duration: edu.duration, std: edu.std, score: edu.score }
+                    });
+                    %>
+                </li>
+                <% }); %>
+            </ul>
+        </div>
+        <%- include('../components/cat_header', { catName: "Projects" }); %>
+        <div class="cat-list-body">
+            <ul>
+            <% projects.forEach((proj) => { %>
+                <li>
+                <%-
+                    include('../components/project', { data:
+                        { title: proj.title, duration: proj.duration, link: proj.link, desc: proj.desc }
+                    });
+                %>
+                </li>
+            <% }); %>
+            </ul>
         </div>
         <div class="footer">
             <%- include('../components/cat_header', { catName: "Skills" }); %>
@@ -133,6 +153,14 @@
             if (skillItems) {
                 skillItems[skillItems.length-1].classList.add("pad-bottom-extra");
             }
+
+            <%
+                Object.keys(theme).forEach(function(key) {
+                    if (theme.hasOwnProperty(key)) {
+            %>
+            document.documentElement.style.setProperty('--theme-<%=key%>', '<%=theme[key]%>');
+            <%  }}); %>
+            console.log(getComputedStyle(document.documentElement).getPropertyValue('--theme-primary'));
         }, false);
     </script>
 </body>
