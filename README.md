@@ -44,7 +44,3 @@ npm start
 ```
 
 - Open your favourite browser and browse to `http://localhost:8080`
-
-
-### Preview
-![Preview](https://raw.githubusercontent.com/methusael13/resume-builder/master/preview/preview.png)
