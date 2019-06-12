@@ -91,6 +91,27 @@
                 <% }); %>
             </ul>
         </div>
+        <%- include('../components/cat_header', { catName: "Skills" }); %>
+        <% skills.forEach((skill) => { %>
+            <%
+                let type_klass = "cat-skill-type";
+                let body_klass = "cat-skill-body";
+
+                if (skill.graph == "false") { type_klass += " force-inline"; body_klass += "-gen"; }
+            %>
+            <div class="cat-skill-item"><div class="<%= type_klass %>"><%= skill.category %></div>
+            <div class="<%= body_klass %>">
+            <% if (skill.graph == "true") { %>
+                <% skill.topics.forEach((topic) => { %>
+                    <%- include('../components/skill', { skill: topic.name, perc: topic.perc }); %>
+                <% }); %>
+            <% } else { %>
+                <% skill.topics.forEach((topic) => { %>
+                    <div class="skill-gen"><%= topic %></div>
+                <% }); %>
+            <% } %>
+            </div></div>
+        <% }); %>
         <%- include('../components/cat_header', { catName: "Projects" }); %>
         <div class="cat-list-body">
             <ul>
@@ -106,27 +127,6 @@
             </ul>
         </div>
         <div class="footer">
-            <%- include('../components/cat_header', { catName: "Skills" }); %>
-            <% skills.forEach((skill) => { %>
-                <%
-                let type_klass = "cat-skill-type";
-                let body_klass = "cat-skill-body";
-
-                if (skill.graph == "false") { type_klass += " force-inline"; body_klass += "-gen"; }
-                %>
-                <div class="cat-skill-item"><div class="<%= type_klass %>"><%= skill.category %></div>
-                <div class="<%= body_klass %>">
-                    <% if (skill.graph == "true") { %>
-                        <% skill.topics.forEach((topic) => { %>
-                            <%- include('../components/skill', { skill: topic.name, perc: topic.perc }); %>
-                        <% }); %>
-                    <% } else { %>
-                        <% skill.topics.forEach((topic) => { %>
-                            <div class="skill-gen"><%= topic %></div>
-                        <% }); %>
-                    <% } %>
-                </div></div>
-            <% }); %>
             <% if (events) { %>
                 <% events.forEach((event) => { %>
                     <%- include('../components/cat_header', { catName: event.title }); %>
@@ -149,7 +149,7 @@
             };
 
             // Extra padding for last skill item
-            let skillItems = document.querySelectorAll(".footer > .cat-skill-item");
+            let skillItems = document.querySelectorAll(".cat-skill-item");
             if (skillItems) {
                 skillItems[skillItems.length-1].classList.add("pad-bottom-extra");
             }
